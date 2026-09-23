@@ -1,0 +1,1712 @@
+* {
+    padding: 0;
+    margin: 0;
+    transition: 0.7s;
+}
+
+/* Index home */
+
+.navbar {
+    backdrop-filter: blur(10px);
+}
+
+body {
+    background: url('../Media/background.png');
+    background-size: cover;
+}
+
+.nav-bar a img {
+    height: 55px;
+    width: 135px;
+}
+
+.nav-bar nav ul {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.nav-bar nav ul a:hover {
+    color: rgb(184, 2, 184);
+    font-weight: 500;
+}
+
+.form-control::placeholder {
+    color: white !important;
+    opacity: 0.4;
+}
+
+.nav-bar .icon {
+    color: white;
+    height: 25px;
+    width: 25px;
+}
+
+.nav-bar .icon2 {
+    color: white;
+}
+
+.notification-wrap {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notification-dot {
+    position: absolute;
+    top: -6px;
+    right: 10px;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 5px;
+    border-radius: 999px;
+    background: #e11d48;
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    line-height: 18px;
+    text-align: center;
+    box-shadow: 0 0 0 2px rgba(11, 9, 17, 0.9);
+}
+
+.nav-bar .search-bar {
+    width: 220px;
+    max-width: 100%;
+}
+
+.nav-bar .search-bar .form-control {
+    background: rgba(24, 24, 24, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-left: none;
+    border-radius: 0 50px 50px 0;
+    height: 38px;
+    color: white;
+    box-shadow: none;
+}
+
+.nav-bar .search-bar .form-control:focus {
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 0 0.15rem rgba(255, 255, 255, 0.08);
+}
+
+.nav-bar .search-bar .search-icon {
+    background: rgba(24, 24, 24, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-right: none;
+    border-radius: 50px 0 0 50px;
+    color: rgba(255, 255, 255, 0.9);
+    height: 38px;
+    padding: 0 14px;
+}
+
+.nav-bar .search-bar .search-icon i {
+    font-size: 0.9rem;
+}
+
+.nav-bar .search-bar .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-bar .btn {
+    background-color: blueviolet;
+}
+
+.menu-toggle {
+    width: 38px;
+    height: 38px;
+    margin-left: 8px;
+    padding: 8px 7px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 6px;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: white;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+    background: blueviolet;
+}
+
+.account-menu {
+    position: absolute;
+    top: 100%;
+    right: 12px;
+    display: flex;
+    gap: 4px;
+    max-width: calc(100% - 24px);
+    padding: 8px;
+    background: rgba(18, 16, 29, 0.96);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+    transform: translateY(-12px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.account-menu.open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.account-menu a {
+    padding: 8px 10px;
+    color: white;
+    font-size: 0.85rem;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.account-menu a i {
+    width: 18px;
+    margin-right: 6px;
+    text-align: center;
+}
+
+.account-menu a:hover,
+.account-menu a:focus {
+    color: white;
+    background: blueviolet;
+    border-radius: 4px;
+}
+
+@media (max-width: 767px) {
+    .navbar-brand img {
+        height: 42px;
+        width: 110px;
+    }
+
+    .navbar-collapse {
+        padding-top: 10px;
+    }
+
+    .navbar-nav {
+        gap: 0.5rem !important;
+        margin-left: 0 !important;
+    }
+
+    .nav-bar .search-bar {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .notification-wrap {
+        margin-left: auto;
+    }
+
+    .nav-bar .btn {
+        width: 100%;
+        margin-top: 6px;
+    }
+
+    .menu-toggle {
+        margin-left: 0;
+        margin-top: 8px;
+    }
+
+    .account-menu {
+        left: 12px;
+        right: 12px;
+        max-width: none;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .carousel-sec .carousel-item {
+        height: 72vh;
+        margin-top: 72px;
+    }
+
+    .carousel-content {
+        max-width: 100%;
+        padding: 0 1rem;
+        bottom: 8%;
+    }
+
+    .carousel-content h1 {
+        font-size: 2.4rem;
+    }
+
+    .carousel-content p {
+        font-size: 0.94rem;
+    }
+
+    .carousel-content .d-flex {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .carousel-content .btn {
+        width: auto;
+        margin-bottom: 8px;
+    }
+
+    .home-cards>.container {
+        width: 100%;
+    }
+
+    .home-cards h4 {
+        font-size: 1.1rem;
+    }
+
+    .scroll-card {
+        width: 72vw;
+    }
+}
+
+/* Carousel */
+
+.carousel-sec .carousel-item {
+    margin-top: 77px;
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-sec .carousel-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(8, 7, 13, 0.35) 0%, rgba(8, 7, 13, 0.75) 65%, #000 100%),
+        linear-gradient(90deg, rgba(8, 7, 13, 0.9) 0%, rgba(8, 7, 13, 0.2) 55%);
+}
+
+.carousel-sec .carousel-indicators [data-bs-target] {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: rgb(59, 4, 111);
+}
+
+.carousel-content {
+    position: absolute;
+    bottom: 8%;
+    left: 0;
+    z-index: 2;
+    max-width: 600px;
+    padding: 0 1.5rem;
+}
+
+.carousel-content h1 {
+    font-size: 60px;
+    font-weight: 500;
+    color: white;
+    text-shadow: 0 4px 24px rgba(0, 0, 0, 0.6);
+}
+
+.carousel-content p {
+    color: rgb(104, 102, 102);
+}
+
+.carousel-content a {
+    background-color: blueviolet;
+    color: white;
+}
+
+.carousel-content .btn {
+    background-color: blueviolet;
+    color: white;
+}
+
+.carousel-content a,
+.btn:hover {
+    background-color: blueviolet;
+}
+
+/* Scrolling-cards */
+
+.home-cards {
+    padding-bottom: 2rem;
+}
+
+.home-cards>.container {
+    position: relative;
+    width: 95%;
+    max-width: 1400px;
+}
+
+.home-cards h4 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.35rem;
+    font-weight: 600;
+}
+
+.home-cards h4::before {
+    content: "";
+    width: 4px;
+    height: 24px;
+    border-radius: 4px;
+    background: #a855f7;
+}
+
+.home-cards .btn-outline-secondary {
+    color: #d8c2ff;
+    border-color: rgba(168, 85, 247, 0.55);
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    font-size: 1.1rem;
+}
+
+.home-cards .btn-outline-secondary:hover {
+    color: white;
+    background: #8b3dce;
+    border-color: #8b3dce;
+}
+
+.scroll-container {
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #9b5de5 rgba(255, 255, 255, 0.12);
+    -ms-overflow-style: none;
+    padding-bottom: 14px !important;
+}
+
+.scroll-card {
+    scroll-snap-align: start;
+    width: clamp(195px, 80vw, 245px);
+    border: 2px solid transparent;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #171525;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    animation: cardAppear .6s ease both;
+    transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+    cursor: pointer;
+}
+
+.scroll-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: #a855f7;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.55);
+}
+
+.scroll-card .img-container {
+    position: relative;
+    overflow: hidden;
+    background: #252238;
+}
+
+.scroll-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: transform .5s ease;
+}
+
+.scroll-card:hover img {
+    transform: scale(1.08);
+}
+
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background: #9b5de5;
+    background-clip: padding-box;
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #c084fc;
+    background-clip: padding-box;
+}
+
+.scroll-card .img-container span {
+    position: absolute;
+    font-family: sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    top: 0%;
+    left: 0%;
+    margin: 10px;
+    padding: 5px 8px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.65);
+    color: white !important;
+}
+
+.scroll-card .img-container .icon {
+    color: white;
+    background: rgba(0, 0, 0, 0.65);
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    font-weight: bold;
+    top: 0%;
+    right: 0%;
+    margin: 9px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.scroll-card .img-container .icon:hover {
+    background: #a855f7;
+}
+
+.scroll-card .card-body {
+    min-height: 82px;
+    padding: 12px 14px;
+    background: #171525 !important;
+}
+
+.scroll-card .card-title {
+    margin-bottom: 6px;
+    overflow: hidden;
+    font-size: 1rem;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.scroll-card .card-text {
+    margin: 0;
+    color: #aaa6bd;
+    font-size: 0.78rem;
+}
+
+@media (max-width: 576px) {
+    .navbar-brand img {
+        height: 38px;
+        width: 98px;
+    }
+
+    .scroll-card {
+        width: 80vw;
+    }
+
+    .scroll-card img {
+        height: 240px;
+    }
+
+    .carousel-content h1 {
+        font-size: 2rem;
+    }
+
+    .mylist-page {
+        padding-top: 110px;
+    }
+}
+
+/* My list */
+
+.mylist-page {
+    min-height: 100vh;
+    padding-top: 125px;
+    padding-bottom: 35px;
+    background: linear-gradient(180deg, rgba(8, 7, 13, .65), rgba(8, 7, 13, .92));
+}
+
+.mylist-tabs .nav-link {
+    color: #c4bfd0;
+    background: rgba(255, 255, 255, .08);
+}
+
+.mylist-tabs .nav-link:hover,
+.mylist-tabs .nav-link.active {
+    color: white;
+    background: #9b4dca;
+}
+
+.mylist-tabs .badge {
+    color: white;
+    background: rgba(0, 0, 0, .25);
+}
+
+.mylist-browse-button,
+.watch-button {
+    color: white;
+    background: #9b4dca;
+}
+
+.mylist-browse-button:hover,
+.watch-button:hover {
+    color: white;
+    background: #7935a5;
+}
+
+.mylist-card {
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, .1);
+    border-radius: 10px;
+    background: #171525;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, .22);
+}
+
+.mylist-card:hover {
+    border-color: #a855f7;
+    transform: translateY(-6px);
+}
+
+.mylist-card img {
+    height: 270px;
+    object-fit: cover;
+}
+
+.mylist-card .card-body {
+    color: white;
+    background: #171525;
+}
+
+.mylist-card .card-title {
+    min-height: 48px;
+    margin-bottom: 6px;
+    font-size: 1rem;
+}
+
+.mylist-card .card-text {
+    color: #aaa6bd;
+    font-size: .85rem;
+}
+
+.remove-button {
+    height: 30px;
+    color: #c4bfd0;
+    border: 1px solid rgba(255, 255, 255, .15);
+}
+
+.remove-button:hover {
+    color: white;
+    background: #dc3545;
+    border-color: #dc3545;
+}
+
+.mylist-page+.site-footer {
+    margin-top: 0;
+}
+
+@media (max-width: 576px) {
+    .mylist-page {
+        padding-top: 110px;
+    }
+
+    .mylist-card img {
+        height: 220px;
+    }
+}
+
+/* profile */
+
+body {
+    min-height: 100vh;
+    background-color: #0b0911;
+    color: #f8f9fa;
+}
+
+.profile-page {
+    padding-top: 108px;
+    padding-bottom: 60px;
+    background: linear-gradient(180deg, rgba(11, 9, 17, 0.66), #0b0911 28%);
+}
+
+.profile-cover {
+    min-height: 250px;
+    background: linear-gradient(90deg, rgba(12, 9, 21, 0.96), rgba(12, 9, 21, 0.35)),
+        url('https://wallpapercave.com/wp/wp1956060.png') center/cover;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px 18px 0 0;
+}
+
+.profile-avatar {
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+    object-position: center 20%;
+    border: 5px solid #0b0911;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.45);
+}
+
+.profile-header {
+    min-height: 82px;
+}
+
+.profile-avatar {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.profile-identity {
+    padding-bottom: 14px;
+}
+
+.profile-identity h1 {
+    margin-top: 8px;
+    line-height: 1.15;
+}
+
+.profile-panel,
+.stat-card,
+.content-card {
+    background: rgba(25, 21, 37, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.2);
+}
+
+.profile-panel {
+    border-radius: 0 0 18px 18px;
+}
+
+.stat-card,
+.content-card {
+    border-radius: 12px;
+}
+
+.stat-card h3 {
+    color: #d9b8ff;
+}
+
+.profile-page .nav-pills .nav-link {
+    color: #b7adca;
+    border-radius: 8px;
+}
+
+.profile-page .nav-pills .nav-link.active,
+.profile-page .nav-pills .nav-link:hover {
+    background-color: #8b35d6;
+    color: #fff;
+}
+
+.profile-page .form-control,
+.profile-page .form-select {
+    background-color: #100d18;
+    border-color: rgba(255, 255, 255, 0.16);
+    color: #fff;
+}
+
+.profile-page .form-control:focus,
+.profile-page .form-select:focus {
+    border-color: #a855f7;
+    box-shadow: 0 0 0 0.2rem rgba(168, 85, 247, 0.2);
+}
+
+.profile-page .form-label,
+.muted-copy {
+    color: #a9a1b6;
+}
+
+.anime-thumb {
+    width: 58px;
+    height: 78px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.progress {
+    height: 7px;
+    background-color: #332b41;
+}
+
+.progress-bar {
+    background-color: #a855f7;
+}
+
+.btn-violet {
+    background-color: #8b35d6;
+    color: #fff;
+    border: 0;
+}
+
+.btn-violet:hover {
+    background-color: #a855f7;
+    color: #fff;
+}
+
+.modal-content {
+    background-color: #191525;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.settings-modal .modal-dialog {
+    margin: 0 auto;
+    transform: translateY(-100%);
+    transition: transform 0.45s ease-out;
+}
+
+.settings-modal.show .modal-dialog {
+    transform: translateY(0);
+}
+
+.settings-modal .modal-content {
+    overflow: hidden;
+    border: 1px solid rgba(213, 156, 255, 0.35);
+    border-radius: 0 0 18px 18px;
+    box-shadow: 0 22px 55px rgba(0, 0, 0, 0.5);
+}
+
+.settings-modal .modal-header {
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #8b35d6, #40246b);
+    border: 0;
+}
+
+.settings-modal .settings-icon {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    margin-right: 12px;
+    place-items: center;
+    color: #2b173d;
+    background: #f4d8ff;
+    border-radius: 12px;
+}
+
+.settings-modal .modal-body {
+    padding: 1.5rem;
+}
+
+.settings-modal .settings-row {
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.settings-modal .settings-row:last-child {
+    border-bottom: 0;
+}
+
+.settings-modal .form-select,
+.movie-offcanvas .form-select,
+.season-select {
+    background-color: #100d18;
+    border-color: rgba(213, 156, 255, 0.35);
+    color: #fff;
+}
+
+.settings-modal .form-select:focus,
+.movie-offcanvas .form-select:focus,
+.season-select:focus {
+    border-color: #a855f7;
+    box-shadow: 0 0 0 0.2rem rgba(168, 85, 247, 0.2);
+}
+
+.settings-modal .form-select option,
+.movie-offcanvas .form-select option,
+.season-select option {
+    background-color: #191525;
+    color: #fff;
+}
+
+.settings-modal .form-check-input:checked {
+    background-color: #a855f7;
+    border-color: #a855f7;
+}
+
+.settings-modal .modal-footer {
+    padding: 1rem 1.5rem 1.5rem;
+}
+
+.auth-modal .modal-dialog {
+    max-width: 460px;
+}
+
+.auth-modal .modal-content {
+    overflow: hidden;
+    border: 1px solid rgba(213, 156, 255, 0.35);
+    border-radius: 16px;
+    box-shadow: 0 22px 55px rgba(0, 0, 0, 0.5);
+}
+
+.auth-modal .modal-header {
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #8b35d6, #40246b);
+    border: 0;
+}
+
+.auth-modal .modal-body {
+    padding: 1.5rem;
+}
+
+.auth-modal .form-control,
+.auth-modal .input-group-text {
+    background-color: #100d18;
+    border-color: rgba(255, 255, 255, 0.16);
+    color: #fff;
+}
+
+.auth-modal .input-group-text {
+    color: #cda7ff;
+}
+
+.auth-modal .form-control:focus {
+    border-color: #a855f7;
+    box-shadow: 0 0 0 0.2rem rgba(168, 85, 247, 0.2);
+}
+
+.auth-modal .form-check-input:checked {
+    background-color: #a855f7;
+    border-color: #a855f7;
+}
+
+.auth-modal .auth-link {
+    color: #d9b8ff;
+    text-decoration: none;
+}
+
+.auth-modal .auth-link:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+@media (max-width: 575px) {
+    .profile-page {
+        padding-top: 92px;
+    }
+
+    .profile-cover {
+        min-height: 220px;
+    }
+
+    .profile-header {
+        align-items: center !important;
+        text-align: center;
+    }
+
+    .profile-avatar-column {
+        width: 100%;
+        margin-top: -48px;
+    }
+
+    .profile-identity {
+        padding-bottom: 0;
+    }
+
+    .profile-identity .d-flex {
+        justify-content: center;
+    }
+
+    .profile-header .col-md-auto {
+        width: 100%;
+    }
+
+    .profile-header .btn {
+        width: 100%;
+    }
+}
+
+/* Footer */
+
+.site-footer {
+    margin-top: 0;
+    background: #0c0f1d;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 10px 0;
+}
+
+.brand-title {
+    font-weight: 700;
+    font-size: clamp(0.85rem, 2vw, 1.4rem);
+    margin: 0;
+    white-space: nowrap;
+}
+
+.brand-title .ani {
+    color: #ffffff;
+}
+
+.brand-title .vault {
+    background: linear-gradient(90deg, #8b5cf6, #ec4899);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.brand-tagline {
+    color: #8b8fa3;
+    font-size: clamp(0.55rem, 1vw, 0.8rem);
+    margin: 0;
+    white-space: nowrap;
+}
+
+.footer-nav a {
+    color: #c7c9d9;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: clamp(0.6rem, 1.3vw, 0.92rem);
+    margin: 0 clamp(4px, 1vw, 14px);
+    white-space: nowrap;
+    transition: color .15s ease;
+}
+
+.footer-nav a:hover {
+    color: blueviolet;
+    font-weight: 700;
+}
+
+.footer-socials a {
+    color: #c7c9d9;
+    font-size: clamp(0.75rem, 1.4vw, 1.1rem);
+    margin-left: clamp(6px, 1.2vw, 16px);
+    transition: color .15s ease;
+}
+
+.footer-socials a:hover {
+    color: #ffffff;
+}
+
+.footer-copy {
+    color: #8b8fa3;
+    font-size: clamp(0.5rem, 1vw, 0.82rem);
+    white-space: nowrap;
+}
+
+/* Keep everything on one visible line, shrinking to fit instead of scrolling */
+.footer-row {
+    flex-wrap: nowrap !important;
+    overflow: hidden;
+}
+
+.brand-block,
+.footer-nav,
+.footer-actions {
+    min-width: 0;
+}
+
+@media (max-width: 575px) {
+    .site-footer {
+        padding: 14px 0;
+    }
+
+    .brand-title {
+        font-size: 1.1rem;
+    }
+
+    .brand-tagline {
+        font-size: 0.62rem;
+    }
+
+    .footer-nav {
+        gap: 6px 10px;
+    }
+
+    .footer-nav a {
+        letter-spacing: 1px;
+    }
+
+    .footer-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-socials {
+        gap: 10px;
+    }
+}
+
+/* Anime details */
+
+.anime-details {
+    min-height: calc(100vh - 80px);
+    padding: 130px 7% 60px;
+    color: white;
+}
+
+.anime-hero {
+    margin: 0 auto 70px;
+}
+
+.anime-poster {
+    width: 280px;
+    flex: 0 0 280px;
+    overflow: hidden;
+    border: 4px solid rgba(255, 255, 255, 0.14);
+    border-radius: 12px;
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.4);
+}
+
+.anime-poster img {
+    display: block;
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+}
+
+.eyebrow {
+    margin-bottom: 8px;
+    color: #d59cff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.anime-info h1 {
+    margin-bottom: 14px;
+}
+
+.anime-meta {
+    color: #d4cde0;
+}
+
+.rating {
+    color: #ffd166;
+}
+
+.anime-description {
+    max-width: 610px;
+    color: #c4bfd0;
+    line-height: 1.7;
+}
+
+.watch-btn {
+    color: white;
+    background: #9b4dca;
+}
+
+.list-btn {
+    border: 1px solid #9b4dca;
+    color: white;
+}
+
+.watch-btn:hover,
+.list-btn:hover {
+    color: white;
+    background: #7935a5;
+}
+
+.anime-studio {
+    color: #9d96aa;
+    font-size: 0.9rem;
+}
+
+.episodes-section {
+    margin: 0 auto;
+}
+
+.season-select {
+    border: 1px solid #5f4770;
+    color: white;
+    background: #241a32;
+}
+
+.episode-list {
+    gap: 10px;
+}
+
+.episode {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 14px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: white !important;
+    background-color: rgba(26, 20, 39, 0.85) !important;
+    text-decoration: none;
+}
+
+.episode:hover,
+.episode.active {
+    border-color: #9b4dca;
+    background-color: #5b2a86 !important;
+}
+
+.episode-number {
+    color: #c78be8;
+    font-weight: 700;
+}
+
+.episode strong,
+.episode small {
+    display: block;
+}
+
+.episode small {
+    margin-top: 4px;
+    color: #a59caf;
+}
+
+.episode i {
+    margin-left: auto;
+    color: #d59cff;
+}
+
+@media (max-width: 700px) {
+    .anime-details {
+        padding: 110px 20px 40px;
+    }
+
+    .anime-hero {
+        margin-bottom: 50px;
+    }
+
+    .anime-poster {
+        width: 190px;
+        margin: 0 auto 30px;
+    }
+
+    .anime-poster img {
+        height: 265px;
+    }
+
+}
+
+/* Movies */
+
+.offcanvas-body .bt-color{
+    background: blueviolet;
+    color: white;
+}
+
+.movie-page {
+    min-height: 100vh;
+    padding-top: 120px !important;
+    padding-bottom: 1rem !important;
+    color: white;
+    background: linear-gradient(180deg, rgba(12, 10, 24, 0.35), rgba(12, 10, 24, 0.9));
+}
+
+.movie-page>nav[aria-label="Movie pages"] {
+    margin-bottom: 1rem !important;
+}
+
+.movie-page+.site-footer {
+    margin-top: 0;
+}
+
+.featured-movie {
+    min-height: 430px;
+    background: linear-gradient(90deg, rgba(12, 10, 24, 0.98) 0%, rgba(12, 10, 24, 0.82) 42%, rgba(12, 10, 24, 0.15) 100%),
+        url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWxvbxtzcTeESlsoBjmZD5yS79hI8m_mroUxM22XqSGRZL1woSgSYvgNkFIT2FfxOMAuuv3vyQ1u7DDTxlUFVuX7n-NRMaJwTiUgz4p_WlYfReV6TmLml08EaYXyy-6riKqK3zpK2qpJ8A/w1600/Tanjiro+Kamado+from+Kimetsu+no+Yaiba+Anime+4k+Ultra+HD+Wallpaper.jpg') center/cover;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+}
+
+.movie-watch-button {
+    color: white;
+    background: #9b4dca;
+    border: none;
+}
+
+.movie-watch-button:hover,
+.movie-watch-button:focus {
+    color: white;
+    background: #7935a5;
+}
+
+.movie-heading {
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.movie-pills .nav-link {
+    color: #c4bfd0;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.movie-pills .nav-link:hover,
+.movie-pills .nav-link.active {
+    color: white;
+    background: #9b4dca;
+}
+
+.movie-filter-button {
+    color: white;
+    background: #9b4dca;
+}
+
+.movie-filter-button:hover,
+.movie-filter-button:focus {
+    color: white;
+    background: #7935a5;
+}
+
+.movie-offcanvas {
+    color: #c4bfd0;
+    background: #171525;
+}
+
+.movie-offcanvas .form-check-input:checked {
+    background-color: #9b4dca;
+    border-color: #9b4dca;
+}
+
+.movie-category h2 {
+    border-left: 4px solid #a855f7;
+    padding-left: 12px;
+}
+
+.movie-badge {
+    color: #ead9ff;
+    background: #3b2350;
+}
+
+.movie-card {
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    background: #171525;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
+}
+
+.movie-card:hover {
+    border-color: #a855f7;
+    transform: translateY(-8px);
+    box-shadow: 0 18px 28px rgba(0, 0, 0, 0.45);
+}
+
+.movie-card img {
+    height: 310px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.movie-card:hover img {
+    transform: scale(1.06);
+}
+
+.movie-card .card-body {
+    color: white;
+    background: #171525;
+}
+
+.movie-card .card-title {
+    min-height: 48px;
+    font-size: 1rem;
+}
+
+.movie-card .card-text {
+    color: #aaa6bd;
+    font-size: 0.85rem;
+}
+
+.movie-rating {
+    color: #ffd166;
+    font-size: 0.9rem;
+}
+
+.movie-page .page-link {
+    color: #d8c2ff;
+    background: #171525;
+    border-color: #5f4770;
+}
+
+.movie-page .page-item.active .page-link {
+    color: white;
+    background: #9b4dca;
+    border-color: #9b4dca;
+}
+
+.movie-page .page-item.disabled .page-link {
+    color: #777080;
+    background: #11101b;
+}
+
+@media (max-width: 576px) {
+    .featured-movie {
+        min-height: 390px;
+        background: linear-gradient(90deg, rgba(12, 10, 24, 0.95), rgba(12, 10, 24, 0.6)),
+            url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWxvbxtzcTeESlsoBjmZD5yS79hI8m_mroUxM22XQqSGRZL1woSgSYvgNkFIT2FfxOMAuuv3vyQ1u7DDTxlUFVuX7n-NRMaJwTiUgz4p_WlYfReV6TmLml08EaYXyy-6riKqK3zpK2qpJ8A/w1600/Tanjiro+Kamado+from+Kimetsu+no+Yaiba+Anime+4k+Ultra+HD+Wallpaper.jpg') center/cover;
+    }
+
+    .movie-card img {
+        height: 240px;
+    }
+
+    .movie-card .card-title {
+        min-height: 72px;
+    }
+}
+
+/* genres */
+
+.genres-page {
+    min-height: 100vh;
+    padding-top: 110px;
+    padding-bottom: 20px;
+    background: linear-gradient(180deg, rgba(8, 7, 13, .65), rgba(8, 7, 13, .92));
+}
+
+.genres-page+.site-footer {
+    margin-top: 0;
+}
+
+.genre-card {
+    background: rgba(22, 20, 34, .92);
+    border: 1px solid rgba(255, 255, 255, .12);
+    transition: transform .25s ease, border-color .25s ease;
+}
+
+.genre-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(168, 85, 247, .8);
+}
+
+.genre-icon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    font-size: 1.25rem;
+}
+
+.genre-card .btn-outline-light:hover,
+.genre-filter .btn-check:checked+.btn {
+    background-color: blueviolet;
+    border-color: blueviolet;
+}
+
+.genre-accordion .accordion-item,
+.genre-accordion .accordion-button,
+.genre-accordion .accordion-body {
+    background-color: rgba(22, 20, 34, .92);
+    color: white;
+    border-color: rgba(255, 255, 255, .12);
+}
+
+.genre-accordion .accordion-button:not(.collapsed) {
+    color: white;
+    background-color: rgba(111, 44, 168, .65);
+    box-shadow: none;
+}
+
+.genre-accordion .accordion-button::after {
+    filter: invert(1);
+}
+
+/* Subscription */
+
+.subscription-page {
+    min-height: 100vh;
+    padding: 130px 0 60px;
+    background: linear-gradient(180deg, rgba(8, 7, 13, .72), rgba(8, 7, 13, .97)),
+        url('Media/background.png') center / cover fixed;
+}
+
+.subscription-heading {
+    max-width: 650px;
+}
+
+.subscription-heading h1 {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-weight: 700;
+}
+
+.billing-switch {
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .15);
+    border-radius: 50px;
+    padding: 5px;
+}
+
+.billing-switch .btn {
+    border: 0;
+    border-radius: 50px;
+    color: #ddd;
+}
+
+.billing-switch .btn.active,
+.plan-card .btn-primary {
+    background-color: blueviolet;
+    color: white;
+}
+
+.plan-card {
+    height: 100%;
+    background: rgba(20, 18, 33, .94);
+    border: 1px solid rgba(255, 255, 255, .15);
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .25);
+}
+
+.plan-card.featured {
+    border: 2px solid blueviolet;
+    transform: translateY(-10px);
+}
+
+.plan-card .price {
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+.plan-card .price small {
+    font-size: .9rem;
+    font-weight: 400;
+    color: #aaa;
+}
+
+.plan-card li {
+    margin-bottom: 13px;
+    color: #d2d0d8;
+}
+
+.plan-card li i {
+    color: #b873ff;
+    margin-right: 8px;
+}
+
+.benefit-box {
+    background: rgba(255, 255, 255, .07);
+    border: 1px solid rgba(255, 255, 255, .1);
+    border-radius: 8px;
+}
+
+@media (max-width: 767px) {
+    .subscription-page {
+        padding-top: 105px;
+    }
+
+    .plan-card.featured {
+        transform: none;
+    }
+}
+
+/* Player */
+
+.player-heading {
+    border-left: 4px solid #b873ff;
+    padding-left: 14px;
+}
+
+.player-heading h1 {
+    font-size: clamp(1.35rem, 3vw, 2.2rem);
+}
+
+.video-shell {
+    width: min(100%, 1050px);
+    margin: 0 auto;
+    padding: 6px;
+    background: linear-gradient(135deg, #a855f7, #2dd4bf, #26203a);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, .5);
+}
+
+.video-shell video {
+    background: #050507;
+}
+
+.player-info,
+.episode-choice {
+    background: rgba(26, 20, 39, .88) !important;
+    border-color: rgba(255, 255, 255, .14) !important;
+}
+
+.episode-choice {
+    transition: transform .2s ease, border-color .2s ease, background .2s ease;
+}
+
+.episode-choice:hover,
+.episode-choice.active {
+    transform: translateY(-4px);
+    border-color: #b873ff !important;
+    background: #4b2670 !important;
+}
+
+.episode-choice strong {
+    color: #d59cff;
+    font-size: 1.1rem;
+    margin-right: 10px;
+}
+
+@media (max-width: 575px) {
+    .player-page {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
+/* Continue watching */
+
+.continue-page {
+    min-height: 100vh;
+    padding: 126px 0 56px;
+    background: linear-gradient(180deg, rgba(8, 7, 13, .52), rgba(8, 7, 13, .96)), url('../Media/background.png') center / cover fixed;
+}
+
+.continue-intro {
+    padding-bottom: 34px;
+}
+
+.continue-summary,
+.continue-discover {
+    padding: 18px 20px;
+    border: 1px solid rgba(255, 255, 255, .12);
+    border-radius: 10px;
+    background: rgba(22, 20, 34, .78);
+}
+
+.summary-icon {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    border-radius: 9px;
+    color: #fff;
+    background: #8e48c2;
+}
+
+.continue-list {
+    margin-bottom: 44px;
+}
+
+.continue-browse-link {
+    color: #d59cff;
+    font-size: .9rem;
+    text-decoration: none;
+}
+
+.continue-browse-link:hover {
+    color: #fff;
+}
+
+.continue-card {
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, .12);
+    border-radius: 10px;
+    background: rgba(23, 21, 37, .94);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .25);
+    transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+
+.continue-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(168, 85, 247, .8);
+    box-shadow: 0 18px 32px rgba(0, 0, 0, .42);
+}
+
+.continue-poster {
+    position: relative;
+    height: 215px;
+    overflow: hidden;
+    box-shadow: 0 12px 26px rgba(0, 0, 0, .42);
+}
+
+.continue-poster::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(8, 7, 13, .18) 0%, rgba(8, 7, 13, .2) 35%, rgba(8, 7, 13, .84) 100%), linear-gradient(90deg, rgba(8, 7, 13, .5) 0%, rgba(8, 7, 13, .08) 58%, rgba(8, 7, 13, .35) 100%);
+}
+
+.continue-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .4s ease;
+}
+
+.continue-card:hover .continue-poster img {
+    transform: scale(1.05);
+}
+
+.episode-badge,
+.play-badge {
+    position: absolute;
+    z-index: 1;
+}
+
+.episode-badge {
+    top: 14px;
+    left: 14px;
+    padding: 5px 9px;
+    border-radius: 4px;
+    color: #fff;
+    background: #8e48c2;
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.play-badge {
+    right: 16px;
+    bottom: 14px;
+    display: grid;
+    width: 38px;
+    height: 38px;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, .35);
+    border-radius: 50%;
+    color: #fff;
+    background: rgba(10, 8, 18, .72);
+}
+
+.continue-card-body {
+    padding: 18px;
+}
+
+.continue-card h3 {
+    margin: 0;
+    color: #fff;
+    font-size: 1.25rem;
+}
+
+.continue-card .progress {
+    height: 5px;
+    background: rgba(255, 255, 255, .12);
+}
+
+.continue-card .progress-bar {
+    background: linear-gradient(90deg, #8e48c2, #e05bb8);
+}
+
+.continue-watch-btn,
+.btn-violet {
+    color: #fff;
+    background: #8e48c2;
+    border-color: #8e48c2;
+}
+
+.continue-watch-btn:hover,
+.btn-violet:hover {
+    color: #fff;
+    background: #7135a1;
+    border-color: #7135a1;
+}
+
+.continue-discover {
+    margin-bottom: 8px;
+}
+
+.continue-page + .site-footer {
+    margin-top: 0;
+}
+
+@media (max-width: 767px) {
+    .continue-page {
+        padding-top: 106px;
+    }
+
+    .continue-summary {
+        padding: 14px 16px;
+    }
+
+    .continue-poster {
+        height: 190px;
+    }
+}

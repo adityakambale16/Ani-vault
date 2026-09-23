@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/216b3f5f79.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>My List | AniVault</title>
+</head>
+
+<body>
+    <header class="nav-bar">
+        <nav class="navbar navbar-expand-sm navbar-dark fixed-top navbar-blur">
+            <div class="container-fluid">
+                <a class="navbar-brand" href=""><img src="Media/Nav logo.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mynavbar">
+                    <ul class="navbar-nav me-auto gap-5 ms-4 mt-1">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="movies.html">Movies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="genres.html">Genres</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="mylist.html">Mylist</a>
+                        </li>
+                    </ul>
+                    <div class="input-group input-group-sm search-bar">
+                        <span class="input-group-text search-icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
+                        <input class="form-control text-white" type="text" placeholder="Search">
+                    </div>
+                    <div class="notification-wrap">
+                        <span class="notification-dot">3</span>
+                        <i class="fa-regular fa-bell ms-4 me-4 ms-0 icon"></i>
+                    </div>
+                    <button class="btn text-white pe-4 ps-4" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+                    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open account menu"
+                        aria-expanded="false" aria-controls="accountMenu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            <nav class="account-menu" id="accountMenu" aria-label="Account menu">
+                <a href="profile.html"><i class="fa-regular fa-user"></i>Profile</a>
+                <a href="continue.html"><i class="fa-solid fa-play"></i>Continue Watching</a>
+                <a href="#settingsModal" data-bs-toggle="modal" aria-controls="settingsModal"><i
+                        class="fa-solid fa-gear"></i>Settings</a>
+                <a href="#"><i class="fa-solid fa-crown"></i>Subscription</a>
+                <a href="#"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+            </nav>
+        </nav>
+    </header>
+
+    <main class="mylist-page container-fluid">
+        <div class="container">
+            <div class="row align-items-center g-4 mb-4">
+                <div class="col-md-8">
+                    <p class="eyebrow mb-2">Your personal collection</p>
+                    <h1 class="display-5 fw-bold text-white mb-2">My List</h1>
+                    <p class="text-white-50 mb-0">Keep your favourite anime shows and movies in one place.</p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <a href="index.html" class="btn mylist-browse-button"><i class="fa-solid fa-plus"></i> Add more
+                        titles</a>
+                </div>
+            </div>
+
+            <ul class="nav nav-pills mylist-tabs gap-2 mb-4" aria-label="My list categories">
+                <li class="nav-item"><a class="nav-link active" href="#saved-shows">Saved shows <span
+                            class="badge ms-1">4</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#saved-movies">Saved movies <span
+                            class="badge ms-1">4</span></a></li>
+            </ul>
+
+            <section class="mb-5" id="saved-shows" aria-labelledby="saved-shows-title">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h2 id="saved-shows-title" class="h3 text-white mb-0">Saved shows</h2>
+                    <span class="text-white-50 small">4 titles</span>
+                </div>
+                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
+                    <div class="col">
+                        <div class="card mylist-card h-100"><img src="https://images5.alphacoders.com/532/532559.jpg"
+                                class="card-img-top" alt="Naruto">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between gap-2">
+                                    <h3 class="h5 card-title">Naruto</h3><button class="btn btn-sm remove-button"
+                                        aria-label="Remove Naruto"><i class="fa-solid fa-xmark"></i></button>
+                                </div>
+                                <p class="card-text">2002 &middot; Action</p><a href="anime.html"
+                                    class="btn btn-sm watch-button"><i class="fa-solid fa-play"></i> Watch now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card mylist-card h-100"><img
+                                src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=cover,format=auto,quality=85,width=1920/keyart/GR751KNZY-backdrop_wide"
+                                class="card-img-top" alt="Attack on Titan">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between gap-2">
+                                    <h3 class="h5 card-title">Attack on Titan</h3><button
+                                        class="btn btn-sm remove-button" aria-label="Remove Attack on Titan"><i
+                                            class="fa-solid fa-xmark"></i></button>
+                                </div>
+                                <p class="card-text">2013 &middot; Action</p><a href="anime.html"
+                                    class="btn btn-sm watch-button"><i class="fa-solid fa-play"></i> Watch now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card mylist-card h-100"><img
+                                src="https://images2.alphacoders.com/139/thumb-1920-1399041.jpg"
+                                class="card-img-top" alt="Demon Slayer">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between gap-2">
+                                    <h3 class="h5 card-title">Demon Slayer</h3><button class="btn btn-sm remove-button"
+                                        aria-label="Remove Demon Slayer"><i class="fa-solid fa-xmark"></i></button>
+                                </div>
+                                <p class="card-text">2019 &middot; Fantasy</p><a href="anime.html"
+                                    class="btn btn-sm watch-button"><i class="fa-solid fa-play"></i> Watch now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card mylist-card h-100"><img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpgVBd1DKXEoSg8WmmDPXPe4tImpyDlZ3_IfVsrKKbhIPs-ghhPomsKmZx&s=10"
+                                class="card-img-top" alt="One Piece">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between gap-2">
+                                    <h3 class="h5 card-title">One Piece</h3><button class="btn btn-sm remove-button"
+                                        aria-label="Remove One Piece"><i class="fa-solid fa-xmark"></i></button>
+                                </div>
+                                <p class="card-text">1999 &middot; Adventure</p><a href="anime.html"
+                                    class="btn btn-sm watch-button"><i class="fa-solid fa-play"></i> Watch now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="pb-5" id="saved-movies" aria-labelledby="saved-movies-title">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h2 id="saved-movies-title" class="h3 text-white mb-0">Saved movies</h2>
+                    <span class="text-white-50 small">4 titles</span>
+                </div>
+                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
+                    <div class="col">
+                        <div class="card mylist-card h-100"><img
+                                src="https://image.tmdb.org/t/p/w500/6pZgH10jhpToPcf0uvyTCPFhWpI.jpg"
+                                class="card-img-top" alt="Howl's Moving Castle">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between gap-2">
+                                    <h3 class="h5 card-title">Howl's Moving Castle</h3><button
+                                        class="btn btn-sm remove-button" aria-label="Remove Howl's Moving Castle"><i
+                                            class="fa-solid fa-xmark"></i></button>
+                                </div>
+                                <p class="card-text">2004 &middot; Fantasy</p><a href="movies.html"
+                                    class="btn btn-sm watch-button"><i class="fa-solid fa-play"></i> Watch now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card mylist-card h-100"><img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1ANSQFhztfeVY5IF5JTc1ASZiZp75geSTVOHozHus9PJ-6q-rH1A7mVM&s=10" class="card-img-top"
+                                class="card-img-top" alt="Spirited Away">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between gap-2">
+                                    <h3 class="h5 card-title">Spirited Away</h3><button class="btn btn-sm remove-button"
+                                        aria-label="Remove Spirited Away"><i class="fa-solid fa-xmark"></i></button>
+                                </div>
+                                <p class="card-text">2001 &middot; Fantasy</p><a href="movies.html"
+                                    class="btn btn-sm watch-button"><i class="fa-solid fa-play"></i> Watch now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card mylist-card h-100"><img src="https://wallpapercat.com/w/full/a/e/f/118113-1536x2732-mobile-hd-your-name-background-image.jpg"
+                                class="card-img-top" alt="Your Name">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between gap-2">
+                                    <h3 class="h5 card-title">Your Name</h3><button class="btn btn-sm remove-button"
+                                        aria-label="Remove Your Name"><i class="fa-solid fa-xmark"></i></button>
+                                </div>
+                                <p class="card-text">2016 &middot; Romance</p><a href="movies.html"
+                                    class="btn btn-sm watch-button"><i class="fa-solid fa-play"></i> Watch now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card mylist-card h-100"><img
+                                src="https://m.media-amazon.com/images/M/MV5BMzNhZTdmNDYtNTA0NC00MmNmLWIzYjUtNjg5NzNlYWQ0N2E5XkEyXkFqcGc@._V1_.jpg"
+                                class="card-img-top" alt="Jujutsu Kaisen 0">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between gap-2">
+                                    <h3 class="h5 card-title">Jujutsu Kaisen 0</h3><button
+                                        class="btn btn-sm remove-button" aria-label="Remove Jujutsu Kaisen 0"><i
+                                            class="fa-solid fa-xmark"></i></button>
+                                </div>
+                                <p class="card-text">2021 &middot; Action</p><a href="movies.html"
+                                    class="btn btn-sm watch-button"><i class="fa-solid fa-play"></i> Watch now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="modal fade settings-modal" id="settingsModal" tabindex="-1" aria-labelledby="settingsModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="d-flex align-items-center"><span class="settings-icon"><i
+                                class="fa-solid fa-sliders"></i></span>
+                        <div>
+                            <h2 class="modal-title fs-5 mb-1" id="settingsModalLabel">Quick settings</h2>
+                            <p class="small mb-0 text-white-50">Make AniVault feel like yours</p>
+                        </div>
+                    </div><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close settings"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="settings-row"><label class="form-label" for="settingsLanguage">Language</label><select
+                            class="form-select" id="settingsLanguage">
+                            <option>English</option>
+                            <option>Hindi</option>
+                            <option>Japanese</option>
+                        </select></div>
+                    <div class="settings-row d-flex justify-content-between align-items-center">
+                        <div><strong>Autoplay next episode</strong>
+                            <p class="small text-white-50 mb-0">Continue your anime automatically</p>
+                        </div>
+                        <div class="form-check form-switch"><input class="form-check-input" type="checkbox"
+                                id="autoplaySetting" checked><label class="visually-hidden"
+                                for="autoplaySetting">Autoplay next episode</label></div>
+                    </div>
+                    <div class="settings-row d-flex justify-content-between align-items-center">
+                        <div><strong>New episode alerts</strong>
+                            <p class="small text-white-50 mb-0">Get notified about fresh releases</p>
+                        </div>
+                        <div class="form-check form-switch"><input class="form-check-input" type="checkbox"
+                                id="alertsSetting" checked><label class="visually-hidden" for="alertsSetting">New
+                                episode alerts</label></div>
+                    </div>
+                </div>
+                <div class="modal-footer border-secondary"><button type="button" class="btn btn-outline-light"
+                        data-bs-dismiss="modal">Close</button><button type="button" class="btn btn-violet"
+                        data-bs-dismiss="modal">Save settings</button></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container-fluid px-4">
+            <div class="footer-row d-flex justify-content-between align-items-center"
+                style="gap: clamp(6px, 2vw, 24px);">
+
+                <!-- Brand -->
+                <div class="brand-block">
+                    <p class="brand-title"><span class="ani">Ani</span><span class="vault">Vault</span></p>
+                    <p class="brand-tagline">Your Anime Universe</p>
+                </div>
+
+                <!-- Nav links -->
+                <nav class="footer-nav d-flex">
+                    <a href="index.html">Home</a>
+                    <a href="movies.html">Movies</a>
+                    <a href="genres.html">Genres</a>
+                    <a href="mylist.html">My List</a>
+                </nav>
+
+                <!-- Socials + copyright -->
+                <div class="footer-actions d-flex align-items-center">
+                    <div class="footer-socials d-flex">
+                        <a href="#"><i class="fa-brands fa-discord"></i></a>
+                        <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                    <span class="footer-copy ms-4">&copy; 2026 AniVault. All rights reserved.</span>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <script src="JS/arrow.js"></script>
+</body>
+
+</html>

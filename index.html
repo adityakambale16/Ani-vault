@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/216b3f5f79.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="nav-bar">
+        <nav class="navbar navbar-expand-sm navbar-dark fixed-top navbar-blur">
+            <div class="container-fluid">
+                <a class="navbar-brand" href=""><img src="Media/Nav logo.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mynavbar">
+                    <ul class="navbar-nav me-auto gap-5 ms-4 mt-1">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="movies.html">Movies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="genres.html">Genres</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mylist.html">Mylist</a>
+                        </li>
+                    </ul>
+                    <div class="input-group input-group-sm search-bar">
+                        <span class="input-group-text search-icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
+                        <input class="form-control text-white" type="text" placeholder="Search">
+                    </div>
+                    <div class="notification-wrap">
+                        <span class="notification-dot">3</span>
+                        <i class="fa-regular fa-bell ms-4 me-4 ms-0 icon"></i>
+                    </div>
+                    <button class="btn text-white pe-4 ps-4" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+                    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open account menu"
+                        aria-expanded="false" aria-controls="accountMenu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            <nav class="account-menu" id="accountMenu" aria-label="Account menu">
+                <a href="profile.html"><i class="fa-regular fa-user"></i>Profile</a>
+                <a href="continue.html"><i class="fa-solid fa-play"></i>Continue Watching</a>
+                <a href="#settingsModal" data-bs-toggle="modal" aria-controls="settingsModal"><i
+                        class="fa-solid fa-gear"></i>Settings</a>
+                <a href="subscription.html"><i class="fa-solid fa-crown"></i>Subscription</a>
+                <a href=""><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+            </nav>
+        </nav>
+    </header>
+
+    <section class="carousel-sec">
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            </div>
+
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+                <div class="carousel-item active"
+                    style="background-image:url('https://images5.alphacoders.com/532/532559.jpg')">
+                    <div class="carousel-content">
+                        <h1>Naruto</h3>
+                            <p>A young ninja who carries a powerful spirit sealed within him fights to earn the respect
+                                of his village while dreaming of becoming its leader.</p>
+                            <div class="d-flex gap-2">
+                                <a href="anime.html" class="btn"><i class="fa-solid fa-play"></i>Watch
+                                    Now</a>
+                                <button type="button" class="btn" data-id="naruto"><i class="fa-solid fa-plus"></i> My
+                                    List</button>
+                            </div>
+                    </div>
+                </div>
+                <div class="carousel-item"
+                    style="background-image: url('https://4kwallpapers.com/images/wallpapers/attack-on-titan-3840x2160-21075.jpg');">
+                    <div class="carousel-content">
+                        <h1>Attack On Titan</h3>
+                            <p>Attack on Titan is a dark fantasy story where humanity fights for survival inside giant
+                                enclosed cities against massive, flesh-eating humanoid monsters known as Titans.</p>
+                            <div class="d-flex gap-2">
+                                <a href="" class="btn"><i class="fa-solid fa-play"></i>Watch
+                                    Now</a>
+                                <button type="button" class="btn" data-id="naruto"><i class="fa-solid fa-plus"></i> My
+                                    List</button>
+                            </div>
+                    </div>
+                </div>
+                <div class="carousel-item"
+                    style="background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWxvbxtzcTeESlsoBjmZD5yS79hI8m_mroUxM22XqSGRZL1woSgSYvgNkFIT2FfxOMAuuv3vyQ1u7DDTxlUFVuX7n-NRMaJwTiUgz4p_WlYfReV6TmLml08EaYXyy-6riKqK3zpK2qpJ8A/w1600/Tanjiro+Kamado+from+Kimetsu+no+Yaiba+Anime+4k+Ultra+HD+Wallpaper.jpg');">
+                    <div class="carousel-content">
+                        <h1>Demon Slayer</h3>
+                            <p>After his family is slaughtered and his sister turned into a demon, a young boy trains to
+                                become a demon slayer and find a cure.</p>
+                            <div class="d-flex gap-2">
+                                <a href="" class="btn"><i class="fa-solid fa-play"></i>Watch
+                                    Now</a>
+                                <button type="button" class="btn" data-id="naruto"><i class="fa-solid fa-plus"></i> My
+                                    List</button>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+
+    <section class="home-cards mt-5">
+        <div class="container w-80 py-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4 class="m-0 text-white">Trending Now🔥</h4>
+                <div class="d-none d-md-flex gap-2">
+                    <button class="btn btn-outline-secondary btn-sm" id="scrollLeft">&larr;</button>
+                    <button class="btn btn-outline-secondary btn-sm" id="scrollRight">&rarr;</button>
+                </div>
+            </div>
+
+            <div class="scroll-container d-flex flex-nowrap overflow-auto gap-3 pb-2" id="cardTrack">
+                <div class="card scroll-card flex-shrink-0">
+                    <div class="img-container">
+                        <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=cover,format=auto,quality=85,width=1920/keyart/GR751KNZY-backdrop_wide"
+                            class="card-img-top">
+                        <span class="overlay text-white">⭐9.2</span>
+                        <i class="fa-solid fa-plus icon"></i>
+                    </div>
+                    <div class="card-body bg-dark text-white">
+                        <h5 class="card-title">Attack On Titan</h5>
+                        <p class="card-text">2013 ‧ Action ‧ 4 seasons</p>
+                    </div>
+                </div>
+
+                <div class="card scroll-card flex-shrink-0">
+                    <div class="img-container">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpgVBd1DKXEoSg8WmmDPXPe4tImpyDlZ3_IfVsrKKbhIPs-ghhPomsKmZx&s=10"
+                            class="card-img-top">
+                        <span class="overlay text-white">⭐9</span>
+                        <i class="fa-solid fa-plus icon"></i>
+                    </div>
+                    <div class="card-body bg-dark text-white">
+                        <h5 class="card-title">One Piece</h5>
+                        <p class="card-text">1999 ‧ Adventure ‧ 22 seasons</p>
+                    </div>
+                </div>
+
+                <div class="card scroll-card flex-shrink-0">
+                    <div class="img-container">
+                        <img src="https://wallpapercat.com/w/full/5/7/c/34837-2160x3840-mobile-4k-naruto-wallpaper-image.jpg"
+                            class="card-img-top">
+                        <span class="overlay text-white">⭐8.4</span>
+                        <i class="fa-solid fa-plus icon"></i>
+                    </div>
+                    <div class="card-body bg-dark text-white">
+                        <h5 class="card-title">Naruto</h5>
+                        <p class="card-text">1999 ‧ Action ‧ 5 seasons</p>
+                    </div>
+                </div>
+
+                <div class="card scroll-card flex-shrink-0">
+                    <div class="img-container">
+                        <img src="https://images2.alphacoders.com/139/thumb-1920-1399041.jpg"
+                            class="card-img-top">
+                        <span class="overlay text-white">⭐8.5</span>
+                        <i class="fa-solid fa-plus icon"></i>
+                    </div>
+                    <div class="card-body bg-dark text-white">
+                        <h5 class="card-title">Demon Slayer</h5>
+                        <p class="card-text">2019 ‧ Action ‧ 4 seasons</p>
+                    </div>
+                </div>
+
+                <div class="card scroll-card flex-shrink-0">
+                    <div class="img-container">
+                        <img src="https://wallpapercave.com/wp/wp11480056.jpg"
+                            class="card-img-top">
+                        <span class="overlay text-white">⭐8.9</span>
+                        <i class="fa-solid fa-plus icon"></i>
+                    </div>
+                    <div class="card-body bg-dark text-white">
+                        <h5 class="card-title">Death Note</h5>
+                        <p class="card-text">2006 ‧ Mystery ‧ 1 season</p>
+                    </div>
+                </div>
+
+                <div class="card scroll-card flex-shrink-0">
+                    <div class="img-container">
+                        <img src="https://4kwallpapers.com/images/wallpapers/denji-artwork-2732x2732-13802.jpg"
+                            class="card-img-top">
+                        <span class="overlay text-white">⭐8.3</span>
+                        <i class="fa-solid fa-plus icon"></i>
+                    </div>
+                    <div class="card-body bg-dark text-white">
+                        <h5 class="card-title">Chainsaw Man</h5>
+                        <p class="card-text">2022 ‧ Horror ‧ 1 season</p>
+                    </div>
+                </div>
+
+                <div class="card scroll-card flex-shrink-0">
+                    <div class="img-container">
+                        <img src="https://i.pinimg.com/736x/c5/5a/85/c55a85aef4143eb20e4a5b1db4b62e70.jpg"
+                            class="card-img-top">
+                        <span class="overlay text-white">⭐8.5</span>
+                        <i class="fa-solid fa-plus icon"></i>
+                    </div>
+                    <div class="card-body bg-dark text-white">
+                        <h5 class="card-title">Jujutsu Kaisen</h5>
+                        <p class="card-text">2020 ‧ Adventure ‧ 3 seasons</p>
+                    </div>
+                </div>
+
+                <!-- add more cards as needed -->
+            </div>
+        </div>
+
+        <div class="container py-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4 class="m-0 text-white">Popular This Week <i class="fa-solid fa-chart-simple"></i></h4>
+                <div class="d-none d-md-flex gap-2">
+                    <button class="btn btn-outline-secondary btn-sm" id="scrollLeft1">&larr;</button>
+                    <button class="btn btn-outline-secondary btn-sm" id="scrollRight1">&rarr;</button>
+                </div>
+            </div>
+
+            <div class="scroll-container d-flex flex-nowrap overflow-auto gap-3 pb-2" id="cardTrack1">
+                <div class="card scroll-card flex-shrink-0">
+                    <div class="img-container">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtvWpi2xUBDd0qTLpZJ4Rwk0NuZebMStyN0L3QXOr4G1DNyGeC70krPxc&s=10"
+                            class="card-img-top">
+                        <span class="overlay text-white">⭐8.5</span>
+                        <i class="fa-solid fa-plus icon"></i>
+                    </div>
+                    <div class="card-body bg-dark text-white">
+                        <h5 class="card-title">Solo Leveling</h5>
+                        <p class="card-text">2024 ‧ Action ‧ 2 seasons</p>
+                    </div>
+                </div>
+
+                <div class="card scroll-card flex-shrink-0">
+                    <div class="img-container">
+                        <img src="https://i.pinimg.com/originals/95/29/69/952969b80682ce11112c32d87a4dbe4a.jpg"
+                            class="card-img-top">
+                        <span class="overlay text-white">⭐8.9</span>
+                        <i class="fa-solid fa-plus icon"></i>
+                    </div>
+                    <div class="card-body bg-dark text-white">
+                        <h5 class="card-title">Vinland Saga</h5>
+                        <p class="card-text">2019 ‧ History ‧ 2 seasons</p>
+                    </div>
+                </div>
+
+                <div class="card scroll-card flex-shrink-0">
+                    <div class="img-container">
+                        <img src="https://4kwallpapers.com/images/wallpapers/senku-ishigami-dr-stone--20976.jpg"
+                            class="card-img-top">
+                        <span class="overlay text-white">⭐8.1</span>
+                        <i class="fa-solid fa-plus icon"></i>
+                    </div>
+                    <div class="card-body bg-dark text-white">
+                        <h5 class="card-title">Dr. Stone</h5>
+                        <p class="card-text">2019 ‧ scifi ‧ 4 seasons</p>
+                    </div>
+                </div>
+
+                <div class="card scroll-card flex-shrink-0">
+                    <div class="img-container">
+                        <img src="https://www.desktophut.com/images/thumb_1645132284_959754.jpg"
+                            class="card-img-top">
+                        <span class="overlay text-white">⭐8.7</span>
+                        <i class="fa-solid fa-plus icon"></i>
+                    </div>
+                    <div class="card-body bg-dark text-white">
+                        <h5 class="card-title">Code Geass</h5>
+                        <p class="card-text">2006 ‧ scifi ‧ 2 seasons</p>
+                    </div>
+                </div>
+
+                <div class="card scroll-card flex-shrink-0">
+                    <div class="img-container">
+                        <img src="https://i.pinimg.com/736x/e3/70/d4/e370d4c259c04b49de35dabaec6e7c09.jpg"
+                            class="card-img-top">
+                        <span class="overlay text-white">⭐9</span>
+                        <i class="fa-solid fa-plus icon"></i>
+                    </div>
+                    <div class="card-body bg-dark text-white">
+                        <h5 class="card-title">Hunter x Hunter</h5>
+                        <p class="card-text">2011 ‧ manga ‧ 6 seasons</p>
+                    </div>
+                </div>
+
+                <div class="card scroll-card flex-shrink-0">
+                    <div class="img-container">
+                        <img src="https://wallpapercave.com/wp/wp9620144.png"
+                            class="card-img-top">
+                        <span class="overlay text-white">⭐8.2</span>
+                        <i class="fa-solid fa-plus icon"></i>
+                    </div>
+                    <div class="card-body bg-dark text-white">
+                        <h5 class="card-title">Black Clover</h5>
+                        <p class="card-text">2017 ‧ Adventure ‧ 4 seasons</p>
+                    </div>
+                </div>
+
+                <div class="card scroll-card flex-shrink-0">
+                    <div class="img-container">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe3_nbHWKa8Xno9bwjWx-5M_WEtWckUtQdL_xAFn9B7dphAA4Gg7LdrgE&s=10"
+                            class="card-img-top">
+                        <span class="overlay text-white">⭐8.2</span>
+                        <i class="fa-solid fa-plus icon"></i>
+                    </div>
+                    <div class="card-body bg-dark text-white">
+                        <h5 class="card-title">Spy x Family</h5>
+                        <p class="card-text">2022 ‧ Action ‧ 3 seasons</p>
+                    </div>
+                </div>
+
+                <!-- add more cards as needed -->
+            </div>
+        </div>
+
+        <div class="container py-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4 class="m-0 text-white">Recently added <i class="fa-solid fa-clock-rotate-left"></i></h4>
+                <div class="d-none d-md-flex gap-2">
+                    <button class="btn btn-outline-secondary btn-sm" id="scrollLeft2">&larr;</button>
+                    <button class="btn btn-outline-secondary btn-sm" id="scrollRight2">&rarr;</button>
+                </div>
+            </div>
+
+            <div class="scroll-container d-flex flex-nowrap overflow-auto gap-3 pb-2" id="cardTrack2">
+                <div class="card scroll-card flex-shrink-0">
+                    <div class="img-container">
+                        <img src="https://c4.wallpaperflare.com/wallpaper/306/435/642/hibino-kafka-kaijuu-no-8-kaiju-no-8-anime-boys-anime-hd-wallpaper-preview.jpg"
+                            class="card-img-top">
+                        <span class="overlay text-white">⭐8.2</span>
+                        <i class="fa-solid fa-plus icon"></i>
+                    </div>
+                    <div class="card-body bg-dark text-white">
+                        <h5 class="card-title">Kaijo No. 8</h5>
+                        <p class="card-text">Action ‧ 2 seasons</p>
+                    </div>
+                </div>
+
+                <div class="card scroll-card flex-shrink-0">
+                    <div class="img-container">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYnAl3CGfc3kfzBfq3mAIbIyL561LR-aqruf7RPpiZ7N_wHrWugwGYGKU&s=10"
+                            class="card-img-top">
+                        <span class="overlay text-white">⭐8.1</span>
+                        <i class="fa-solid fa-plus icon"></i>
+                    </div>
+                    <div class="card-body bg-dark text-white">
+                        <h5 class="card-title">Hells Paradise</h5>
+                        <p class="card-text">Action ‧ 2 seasons</p>
+                    </div>
+                </div>
+
+                <div class="card scroll-card flex-shrink-0">
+                    <div class="img-container">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT09BC7BFZ1p6XzSZBvx05LeB3qrb9sAHv0XwmuMIzxCkVwVj3sfADSmsKZ&s=10"
+                            class="card-img-top">
+                        <span class="overlay text-white">⭐8</span>
+                        <i class="fa-solid fa-plus icon"></i>
+                    </div>
+                    <div class="card-body bg-dark text-white">
+                        <h5 class="card-title">Blue Lock</h5>
+                        <p class="card-text">Sports ‧ 2 seasons</p>
+                    </div>
+                </div>
+
+                <div class="card scroll-card flex-shrink-0">
+                    <div class="img-container">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSahQUSICwOcNchGyApaapcUK_N5ioiGYXDd8WApueJrg&s=10"
+                            class="card-img-top">
+                        <span class="overlay text-white">⭐7.5</span>
+                        <i class="fa-solid fa-plus icon"></i>
+                    </div>
+                    <div class="card-body bg-dark text-white">
+                        <h5 class="card-title">Mashle: Magic and Muscles</h5>
+                        <p class="card-text">Comedy ‧ 1 season</p>
+                    </div>
+                </div>
+
+                <div class="card scroll-card flex-shrink-0">
+                    <div class="img-container">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTXbemiQxWI5rht0yLL32CIIbj0nN8GaGC1xrcfL6EPgip-kDGXzEB90YC&s=10"
+                            class="card-img-top">
+                        <span class="overlay text-white">⭐7.7</span>
+                        <i class="fa-solid fa-plus icon"></i>
+                    </div>
+                    <div class="card-body bg-dark text-white">
+                        <h5 class="card-title">Eminence in shadow</h5>
+                        <p class="card-text">Dark fantasy ‧ 2 seasons</p>
+                    </div>
+                </div>
+
+                <div class="card scroll-card flex-shrink-0">
+                    <div class="img-container">
+                        <img src="https://m.media-amazon.com/images/S/pv-target-images/959d02876754f086525faef7484b5f00f7c6748c3aa5c5cec8c9d4db300b6006.jpg"
+                            class="card-img-top">
+                        <span class="overlay text-white">⭐7</span>
+                        <i class="fa-solid fa-plus icon"></i>
+                    </div>
+                    <div class="card-body bg-dark text-white">
+                        <h5 class="card-title">Classroom of Elite</h5>
+                        <p class="card-text">Thriller ‧ 4 seasons</p>
+                    </div>
+                </div>
+
+                <div class="card scroll-card flex-shrink-0">
+                    <div class="img-container">
+                        <img src="https://server.wallpaperalchemy.com/storage/wallpapers/193/frieren-cherry-blossom-4k-wallpaper-card.jpg"
+                            class="card-img-top">
+                        <span class="overlay text-white">⭐8.9</span>
+                        <i class="fa-solid fa-plus icon"></i>
+                    </div>
+                    <div class="card-body bg-dark text-white">
+                        <h5 class="card-title">Frieren</h5>
+                        <p class="card-text">Adventure ‧ 2 seasons</p>
+                    </div>
+                </div>
+
+                <!-- add more cards as needed -->
+            </div>
+    </section>
+
+    <div class="modal fade settings-modal" id="settingsModal" tabindex="-1" aria-labelledby="settingsModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="d-flex align-items-center"><span class="settings-icon"><i
+                                class="fa-solid fa-sliders"></i></span>
+                        <div>
+                            <h2 class="modal-title fs-5 mb-1" id="settingsModalLabel">Quick settings</h2>
+                            <p class="small mb-0 text-white-50">Make AniVault feel like yours</p>
+                        </div>
+                    </div><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close settings"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="settings-row"><label class="form-label" for="settingsLanguage">Language</label><select
+                            class="form-select" id="settingsLanguage">
+                            <option>English</option>
+                            <option>Hindi</option>
+                            <option>Japanese</option>
+                        </select></div>
+                    <div class="settings-row d-flex justify-content-between align-items-center">
+                        <div><strong>Autoplay next episode</strong>
+                            <p class="small text-white-50 mb-0">Continue your anime automatically</p>
+                        </div>
+                        <div class="form-check form-switch"><input class="form-check-input" type="checkbox"
+                                id="autoplaySetting" checked><label class="visually-hidden"
+                                for="autoplaySetting">Autoplay next episode</label></div>
+                    </div>
+                    <div class="settings-row d-flex justify-content-between align-items-center">
+                        <div><strong>New episode alerts</strong>
+                            <p class="small text-white-50 mb-0">Get notified about fresh releases</p>
+                        </div>
+                        <div class="form-check form-switch"><input class="form-check-input" type="checkbox"
+                                id="alertsSetting" checked><label class="visually-hidden" for="alertsSetting">New
+                                episode alerts</label></div>
+                    </div>
+                </div>
+                <div class="modal-footer border-secondary"><button type="button" class="btn btn-outline-light"
+                        data-bs-dismiss="modal">Close</button><button type="button" class="btn btn-violet"
+                        data-bs-dismiss="modal">Save settings</button></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container-fluid px-4">
+            <div class="footer-row d-flex justify-content-between align-items-center"
+                style="gap: clamp(6px, 2vw, 24px);">
+
+                <!-- Brand -->
+                <div class="brand-block">
+                    <p class="brand-title"><span class="ani">Ani</span><span class="vault">Vault</span></p>
+                    <p class="brand-tagline">Your Anime Universe</p>
+                </div>
+
+                <!-- Nav links -->
+                <nav class="footer-nav d-flex">
+                    <a href="index.html">Home</a>
+                    <a href="movies.html">Movies</a>
+                    <a href="genres.html">Genres</a>
+                    <a href="mylist.html">My List</a>
+                </nav>
+
+                <!-- Socials + copyright -->
+                <div class="footer-actions d-flex align-items-center">
+                    <div class="footer-socials d-flex">
+                        <a href="#"><i class="fa-brands fa-discord"></i></a>
+                        <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                    <span class="footer-copy ms-4">&copy; 2026 AniVault. All rights reserved.</span>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <script src="JS/arrow.js"></script>
+</body>
+
+</html>
